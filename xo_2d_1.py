@@ -9,4 +9,5 @@ for i in range(4):
     board[move] = [1, -1][i % 2]
     print(board)
 
+new_board = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
 
