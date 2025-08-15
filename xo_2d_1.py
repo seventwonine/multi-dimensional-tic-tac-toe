@@ -2,12 +2,23 @@
 
 import numpy as np
 
-board = np.zeros(9)
+board = [["-", "-", "-"], ["-", "-", "-"], ["-", "-", "-"]]
 
-for i in range(4):
-    move = int(input("Enter your move (0-8): "))
-    board[move] = [1, -1][i % 2]
+for i in range(9):
+    move = int(input("Enter your move 1-9."))
+    board[(move-1)//3][(move-1)%3] = ["X", "O"][i % 2]
     print(board)
-
-new_board = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+    for j in range(3):
+        if board[j][0] == board[j][1] == board[j][2]:
+            print(f'{["X", "O"][i % 2]} wins!')
+            break
+        elif board[0][j] == board[1][j] == board[2][j]:
+            print(f'{["X", "O"][i % 2]} wins!')
+            break
+    if board[0][0] == board[1][1] == board[2][2]:
+        print(f'{["X", "O"][i % 2]} wins!')
+        break
+    if board[2][0] == board[1][1] == board[0][2]:
+        print(f'{["X", "O"][i % 2]} wins!')
+        break
 
