@@ -10,11 +10,14 @@ def run_xo():
     
     for i in range(9):
         turn = ["X", "O"][i % 2]
+        move = int(input("Enter your move 1-9."))
         move_valid = False
 
+        '''
         while not move_valid:
             move = int(input("Enter your move 1-9."))
             if move_valid
+        '''
 
         board[(move-1)//3][(move-1)%3] = turn
         print(board)
