@@ -1,0 +1,4 @@
+Convert whole setup to function rather than for loop allowing return statements to fully break out
+Pretty print for display
+Add input check so no overwriting / invalid moves
+Add draw message
