@@ -16,7 +16,6 @@ def run_xo():
             move = int(input("Enter your move 1-9."))
             if move_valid
 
-
         board[(move-1)//3][(move-1)%3] = turn
         print(board)
         for j in range(3):
